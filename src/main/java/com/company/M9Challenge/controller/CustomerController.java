@@ -24,26 +24,6 @@ public class CustomerController {
         }
     }
 
-//    @GetMapping("/customer/{state}")
-//    public List<Customer> getCustomerByState(@PathVariable String state) {
-//        List<Customer> returnVal = repo.findByState(state);
-//
-//        for (Customer c : returnVal) {
-//            if (c.getState() != state){
-//                returnVal.remove(c);
-//            }
-//        }
-//
-//        if (returnVal.size() == 0) {
-//            return null;
-//        }
-//
-//        else {
-//            return returnVal;
-//        }
-//
-//    }
-
     @PostMapping("/customer")
     @ResponseStatus(HttpStatus.CREATED)
     public Customer addCustomer(@RequestBody Customer customer) {

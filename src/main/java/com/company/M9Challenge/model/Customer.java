@@ -30,6 +30,8 @@ public class Customer implements Serializable {
     private String address1;
     private String address2;
     private String city;
+
+    @NotNull
     private String state;
     private int postalCode;
     private String country;
@@ -141,5 +143,23 @@ public class Customer implements Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(id, firstName, lastName, email, company, phone, address1, address2, city, state, postalCode, country);
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", company='" + company + '\'' +
+                ", phone=" + phone +
+                ", address1='" + address1 + '\'' +
+                ", address2='" + address2 + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", postalCode=" + postalCode +
+                ", country='" + country + '\'' +
+                '}';
     }
 }
